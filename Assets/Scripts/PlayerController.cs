@@ -1,8 +1,9 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
-    private readonly float moveSpeed = 7f;
+    private readonly float moveSpeed = 10f;
     private readonly float jumpForce = 12f;
     private Rigidbody2D rb;
     private Animator animator;
@@ -12,8 +13,15 @@ public class PlayerController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+
+        SceneManager.sceneLoaded += OnSceneLoaded;
     }
-    
+
+    private void Awake()
+    {
+        DontDestroyOnLoad(gameObject);
+    }
+
     void Update()
     {
         float moveInput = Input.GetAxis("Horizontal");
@@ -32,6 +40,16 @@ public class PlayerController : MonoBehaviour
             rb.AddForceY(jumpForce, ForceMode2D.Impulse);
             animator.SetBool("isJumping", true);
             isGrounded = false;
+        }
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        GameObject spawnPoint = GameObject.Find("SpawnPoint");
+
+        if (spawnPoint != null)
+        {
+            transform.position = spawnPoint.transform.position;
         }
     }
 
