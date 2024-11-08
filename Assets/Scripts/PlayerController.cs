@@ -3,8 +3,8 @@ using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
-    private readonly float moveSpeed = 10f;
-    private readonly float jumpForce = 12f;
+    public float moveSpeed = 10f;
+    public float jumpForce = 12f;
     private Rigidbody2D rb;
     private Animator animator;
     private bool isGrounded;
