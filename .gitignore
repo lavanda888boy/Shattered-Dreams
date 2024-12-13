@@ -79,4 +79,9 @@ crashlytics-build.properties
 
 /Assets/Evil Creature.meta
 /Assets/Evil Creature/
-/Assets/BigManJD/
+/Assets/BigManJD/PlatformerTileset/Background
+/Assets/BigManJD/PlatformerTileset/Character
+/Assets/BigManJD/PlatformerTileset/Enemy
+/Assets/BigManJD/PlatformerTileset/Scenes
+/Assets/BigManJD/PlatformerTileset/Sprites
+/Assets/BigManJD/PlatformerTileset/TilePalette/Tiles
