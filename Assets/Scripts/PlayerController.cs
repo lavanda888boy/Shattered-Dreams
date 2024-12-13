@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rb;
     private Animator animator;
     private bool isGrounded;
+    public DreamcatcherManager DreamcatcherManager;
 
     void Start()
     {
@@ -59,6 +60,15 @@ public class PlayerController : MonoBehaviour
         {
             isGrounded = true;
             animator.SetBool("isJumping", false);
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("DreamcatcherTag"))
+        {
+            Destroy(other.gameObject);
+            DreamcatcherManager.dreamcatcherCount++;
         }
     }
 }
