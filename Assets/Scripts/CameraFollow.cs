@@ -11,6 +11,20 @@ public class CameraFollow : MonoBehaviour
     public float minY;
     public float maxY;
 
+    void Start()
+    {
+        GameObject playerObject = GameObject.FindWithTag("Player");
+
+        if (playerObject != null)
+        {
+            player = playerObject.transform;
+        }
+        else
+        {
+            Debug.LogError("Player object not found");
+        }
+    }
+
     void LateUpdate()
     {
         Vector3 desiredPosition = player.position + offset;

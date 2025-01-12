@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -46,11 +47,22 @@ public class PlayerController : MonoBehaviour
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
+        Console.WriteLine(scene.name);
+
         GameObject spawnPoint = GameObject.Find("SpawnPoint");
 
         if (spawnPoint != null)
         {
             transform.position = spawnPoint.transform.position;
+        }
+
+        if (scene.name.StartsWith("Dream"))
+        {
+            jumpForce = 17f;
+        }
+        else
+        {
+            jumpForce = 12f;
         }
     }
 
