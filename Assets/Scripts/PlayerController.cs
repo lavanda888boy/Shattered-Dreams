@@ -56,7 +56,7 @@ public class PlayerController : MonoBehaviour
             transform.position = spawnPoint.transform.position;
         }
 
-        if (scene.name.StartsWith("Dream"))
+        if (scene.name.Contains("Dream"))
         {
             jumpForce = 17f;
         }
