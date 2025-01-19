@@ -34,7 +34,7 @@ public class ItemSpawner : MonoBehaviour
                     if (!groundTilemap.HasTile(tileAbove))
                     {
                         Vector3 worldPosition = groundTilemap.CellToWorld(tilePosition) +
-                                                new Vector3(0, groundTilemap.cellSize.y + 1f, 0);
+                                                new Vector3(0, groundTilemap.cellSize.y + 3f, 0);
                         validPositions.Add(worldPosition);
                     }
                 }

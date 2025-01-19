@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
     private Animator animator;
     private bool isGrounded;
     public DreamcatcherManager DreamcatcherManager;
+    public SoulPortionManager SoulPortionManager;
 
     void Start()
     {
@@ -45,6 +46,25 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    private void InitializeManagers()
+    {
+        GameObject gameManager = GameObject.Find("GameManager");
+        if (gameManager != null)
+        {
+            DreamcatcherManager = gameManager.GetComponent<DreamcatcherManager>();
+            SoulPortionManager = gameManager.GetComponent<SoulPortionManager>();
+
+            if (DreamcatcherManager == null && SoulPortionManager == null)
+            {
+                Debug.LogWarning("Managers not found on GameManager object.");
+            }
+        }
+        else
+        {
+            Debug.LogWarning("GameManager object not found in the scene.");
+        }
+    }
+
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         Console.WriteLine(scene.name);
@@ -64,6 +84,8 @@ public class PlayerController : MonoBehaviour
         {
             jumpForce = 12f;
         }
+
+        InitializeManagers();
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -81,6 +103,11 @@ public class PlayerController : MonoBehaviour
         {
             Destroy(other.gameObject);
             DreamcatcherManager.dreamcatcherCount++;
+        }
+        else if (other.gameObject.CompareTag("SoulPortion"))
+        {
+            Destroy(other.gameObject);
+            SoulPortionManager.soulPortionCount++;
         }
     }
 }
