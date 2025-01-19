@@ -8304,7 +8304,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66979a699db4d6246be1fcd23b19cc6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneToLoad: DreamRealmScene
+  sceneToLoad: FinalDreamRealmScene
 --- !u!1 &1569556856
 GameObject:
   m_ObjectHideFlags: 0

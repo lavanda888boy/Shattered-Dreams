@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Ground
   - DreamcatcherTag
+  - Spikes
   layers:
   - Default
   - TransparentFX
