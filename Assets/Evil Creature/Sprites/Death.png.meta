@@ -1,16 +1,9 @@
 fileFormatVersion: 2
 guid: e1b788b69a612a34ab2b3f7302e36fec
-AssetOrigin:
-  serializedVersion: 1
-  productId: 284492
-  packageName: Evil Wizard 3
-  packageVersion: 1.0
-  assetPath: Assets/Evil Wizard 3/Sprites/Death.png
-  uploadId: 666277
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
-  serializedVersion: 13
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -55,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 15
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -74,7 +67,7 @@ TextureImporter:
   swizzle: 50462976
   cookieLightType: 0
   platformSettings:
-  - serializedVersion: 4
+  - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 4096
     resizeAlgorithm: 0
@@ -87,7 +80,7 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
+  - serializedVersion: 3
     buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -100,7 +93,7 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
+  - serializedVersion: 3
     buildTarget: Standalone
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -120,14 +113,13 @@ TextureImporter:
       name: Death_0
       rect:
         serializedVersion: 2
-        x: 57
-        y: 43
-        width: 33
-        height: 53
+        x: 0
+        y: 0
+        width: 140
+        height: 140
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -142,14 +134,13 @@ TextureImporter:
       name: Death_1
       rect:
         serializedVersion: 2
-        x: 197
-        y: 43
-        width: 33
-        height: 53
+        x: 140
+        y: 0
+        width: 140
+        height: 140
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -164,14 +155,13 @@ TextureImporter:
       name: Death_2
       rect:
         serializedVersion: 2
-        x: 337
-        y: 43
-        width: 33
-        height: 53
+        x: 280
+        y: 0
+        width: 140
+        height: 140
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -186,14 +176,13 @@ TextureImporter:
       name: Death_3
       rect:
         serializedVersion: 2
-        x: 477
-        y: 43
-        width: 33
-        height: 53
+        x: 420
+        y: 0
+        width: 140
+        height: 140
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -208,14 +197,13 @@ TextureImporter:
       name: Death_4
       rect:
         serializedVersion: 2
-        x: 617
-        y: 43
-        width: 33
-        height: 53
+        x: 560
+        y: 0
+        width: 140
+        height: 140
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -230,14 +218,13 @@ TextureImporter:
       name: Death_5
       rect:
         serializedVersion: 2
-        x: 757
-        y: 43
-        width: 33
-        height: 53
+        x: 700
+        y: 0
+        width: 140
+        height: 140
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -252,14 +239,13 @@ TextureImporter:
       name: Death_6
       rect:
         serializedVersion: 2
-        x: 897
-        y: 43
-        width: 33
-        height: 53
+        x: 840
+        y: 0
+        width: 140
+        height: 140
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -274,14 +260,13 @@ TextureImporter:
       name: Death_7
       rect:
         serializedVersion: 2
-        x: 929
-        y: 86
-        width: 4
-        height: 5
+        x: 980
+        y: 0
+        width: 140
+        height: 140
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -296,14 +281,13 @@ TextureImporter:
       name: Death_8
       rect:
         serializedVersion: 2
-        x: 1037
-        y: 43
-        width: 37
-        height: 53
+        x: 1120
+        y: 0
+        width: 140
+        height: 140
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -318,14 +302,13 @@ TextureImporter:
       name: Death_9
       rect:
         serializedVersion: 2
-        x: 1177
-        y: 43
-        width: 37
-        height: 55
+        x: 1260
+        y: 0
+        width: 140
+        height: 140
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -340,14 +323,13 @@ TextureImporter:
       name: Death_10
       rect:
         serializedVersion: 2
-        x: 1317
-        y: 43
-        width: 37
-        height: 57
+        x: 1400
+        y: 0
+        width: 140
+        height: 140
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -362,14 +344,13 @@ TextureImporter:
       name: Death_11
       rect:
         serializedVersion: 2
-        x: 1458
-        y: 43
-        width: 21
-        height: 52
+        x: 1540
+        y: 0
+        width: 140
+        height: 140
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -384,14 +365,13 @@ TextureImporter:
       name: Death_12
       rect:
         serializedVersion: 2
-        x: 1596
-        y: 43
-        width: 21
-        height: 51
+        x: 1680
+        y: 0
+        width: 140
+        height: 140
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -406,14 +386,13 @@ TextureImporter:
       name: Death_13
       rect:
         serializedVersion: 2
-        x: 1735
-        y: 43
-        width: 22
-        height: 49
+        x: 1820
+        y: 0
+        width: 140
+        height: 140
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -428,14 +407,13 @@ TextureImporter:
       name: Death_14
       rect:
         serializedVersion: 2
-        x: 1871
-        y: 43
-        width: 27
-        height: 44
+        x: 1960
+        y: 0
+        width: 140
+        height: 140
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -450,14 +428,13 @@ TextureImporter:
       name: Death_15
       rect:
         serializedVersion: 2
-        x: 2011
-        y: 43
-        width: 29
-        height: 27
+        x: 2100
+        y: 0
+        width: 140
+        height: 140
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -472,14 +449,13 @@ TextureImporter:
       name: Death_16
       rect:
         serializedVersion: 2
-        x: 2152
-        y: 43
-        width: 28
-        height: 23
+        x: 2240
+        y: 0
+        width: 140
+        height: 140
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -494,14 +470,13 @@ TextureImporter:
       name: Death_17
       rect:
         serializedVersion: 2
-        x: 2290
-        y: 43
-        width: 30
-        height: 23
+        x: 2380
+        y: 0
+        width: 140
+        height: 140
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -512,30 +487,7 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: Death_18
-      rect:
-        serializedVersion: 2
-        x: 2430
-        y: 43
-        width: 30
-        height: 23
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9f33aabd0acd87c4ca7749524cfe0787
-      internalID: -2077022131
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
-    customData: 
     physicsShape: []
     bones: []
     spriteID: 5e97eb03825dee720800000000000000
@@ -545,8 +497,6 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    spriteCustomMetadata:
-      entries: []
     nameFileIdTable:
       Death_0: 741965810
       Death_1: 509398095
@@ -558,7 +508,6 @@ TextureImporter:
       Death_15: 2056589613
       Death_16: 754896255
       Death_17: 127021789
-      Death_18: -2077022131
       Death_2: 1378299051
       Death_3: -1679117468
       Death_4: -1382775219
@@ -572,3 +521,10 @@ TextureImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 284492
+  packageName: Evil Wizard 3
+  packageVersion: 1.0
+  assetPath: Assets/Evil Creature/Sprites/Death.png
+  uploadId: 666277

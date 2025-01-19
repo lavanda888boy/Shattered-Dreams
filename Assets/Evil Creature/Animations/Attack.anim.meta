@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: ba20e24f05ffc5e4ea978734f2b75c5e
+guid: 9a7a21884a1d5af439523a3616a7d02e
 NativeFormatImporter:
   externalObjects: {}
   mainObjectFileID: 7400000
@@ -11,5 +11,5 @@ AssetOrigin:
   productId: 284492
   packageName: Evil Wizard 3
   packageVersion: 1.0
-  assetPath: Assets/Evil Creature/Animations/Jump.anim
+  assetPath: Assets/Evil Creature/Animations/Attack.anim
   uploadId: 666277
