@@ -7,9 +7,10 @@ public class ItemSpawner : MonoBehaviour
     public Tilemap groundTilemap;
     public GameObject collectablePrefab;
     public int numberOfItems = 10;
-    public float spawnOffsetY = 0.5f;
+    public float minDistance = 2.0f;
 
     private List<Vector3> validPositions = new List<Vector3>();
+    private List<Vector3> usedPositions = new List<Vector3>();
 
     void Start()
     {
@@ -25,12 +26,17 @@ public class ItemSpawner : MonoBehaviour
         {
             for (int y = bounds.yMin; y < bounds.yMax; y++)
             {
-                Vector3Int localPlace = (new Vector3Int(x, y, (int)groundTilemap.transform.position.y));
-                Vector3 place = groundTilemap.CellToWorld(localPlace);
+                Vector3Int tilePosition = new Vector3Int(x, y, 0);
 
-                if (!groundTilemap.HasTile(localPlace))
+                if (groundTilemap.HasTile(tilePosition))
                 {
-                    validPositions.Add(place);
+                    Vector3Int tileAbove = new Vector3Int(x, y + 1, 0);
+                    if (!groundTilemap.HasTile(tileAbove))
+                    {
+                        Vector3 worldPosition = groundTilemap.CellToWorld(tilePosition) +
+                                                new Vector3(0, groundTilemap.cellSize.y + 1f, 0);
+                        validPositions.Add(worldPosition);
+                    }
                 }
             }
         }
@@ -44,12 +50,40 @@ public class ItemSpawner : MonoBehaviour
         {
             if (validPositions.Count == 0) break;
 
-            int randomIndex = Random.Range(0, validPositions.Count);
-            Vector3 spawnPosition = validPositions[randomIndex];
+            Vector3 spawnPosition;
+            int attempts = 0;
+
+            do
+            {
+                if (attempts > 100)
+                {
+                    Debug.LogWarning("Unable to find a valid position for item placement.");
+                    return;
+                }
+
+                int randomIndex = Random.Range(0, validPositions.Count);
+                spawnPosition = validPositions[randomIndex];
+                attempts++;
+            }
+            while (!IsFarEnoughFromOthers(spawnPosition));
 
             Instantiate(collectablePrefab, spawnPosition, Quaternion.identity);
 
-            validPositions.RemoveAt(randomIndex);
+            usedPositions.Add(spawnPosition);
+
+            validPositions.Remove(spawnPosition);
         }
+    }
+
+    bool IsFarEnoughFromOthers(Vector3 position)
+    {
+        foreach (Vector3 usedPosition in usedPositions)
+        {
+            if (Vector3.Distance(position, usedPosition) < minDistance)
+            {
+                return false;
+            }
+        }
+        return true;
     }
 }
