@@ -364,7 +364,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dreamcatcherCount: 0
-  totalDreamcatcherCount: 5
+  totalDreamcatcherCount: 10
   dreamcatcherCountText: {fileID: 1064178029}
 --- !u!114 &206385795
 MonoBehaviour:
@@ -375,13 +375,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 206385791}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9fb0c6bd7d5fc194b874eb6b6eabe673, type: 3}
+  m_Script: {fileID: 11500000, guid: 3ed904422cb35d04882460f87aaa54c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   groundTilemap: {fileID: 816627292}
   collectablePrefab: {fileID: 2067281339504686414, guid: fb5a969dd613b04448a408e841c18b45, type: 3}
   numberOfItems: 10
-  minDistance: 10
+  minDistance: 5
 --- !u!1001 &365883724
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7166,6 +7166,7 @@ MonoBehaviour:
   moveSpeed: 10
   jumpForce: 14
   DreamcatcherManager: {fileID: 206385794}
+  SoulPortionManager: {fileID: 0}
 --- !u!1001 &908794422
 PrefabInstance:
   m_ObjectHideFlags: 0

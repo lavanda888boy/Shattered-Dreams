@@ -67,8 +67,6 @@ public class PlayerController : MonoBehaviour
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        Console.WriteLine(scene.name);
-
         GameObject spawnPoint = GameObject.Find("SpawnPoint");
 
         if (spawnPoint != null)
