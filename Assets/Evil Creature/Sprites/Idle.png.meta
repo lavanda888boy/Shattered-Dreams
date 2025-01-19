@@ -1,16 +1,9 @@
 fileFormatVersion: 2
 guid: 90c7332c857b6b043bad30766e14a946
-AssetOrigin:
-  serializedVersion: 1
-  productId: 284492
-  packageName: Evil Wizard 3
-  packageVersion: 1.0
-  assetPath: Assets/Evil Wizard 3/Sprites/Idle.png
-  uploadId: 666277
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
-  serializedVersion: 13
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -55,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 15
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -74,7 +67,7 @@ TextureImporter:
   swizzle: 50462976
   cookieLightType: 0
   platformSettings:
-  - serializedVersion: 4
+  - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -87,7 +80,7 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
+  - serializedVersion: 3
     buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -100,7 +93,7 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
+  - serializedVersion: 3
     buildTarget: Standalone
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -120,14 +113,13 @@ TextureImporter:
       name: Idle_0
       rect:
         serializedVersion: 2
-        x: 57
-        y: 43
-        width: 33
-        height: 53
+        x: 0
+        y: 0
+        width: 140
+        height: 140
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -142,14 +134,13 @@ TextureImporter:
       name: Idle_1
       rect:
         serializedVersion: 2
-        x: 197
-        y: 43
-        width: 33
-        height: 52
+        x: 140
+        y: 0
+        width: 140
+        height: 140
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -164,14 +155,13 @@ TextureImporter:
       name: Idle_2
       rect:
         serializedVersion: 2
-        x: 336
-        y: 43
-        width: 37
-        height: 51
+        x: 280
+        y: 0
+        width: 140
+        height: 140
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -186,14 +176,13 @@ TextureImporter:
       name: Idle_3
       rect:
         serializedVersion: 2
-        x: 478
-        y: 43
-        width: 35
-        height: 51
+        x: 420
+        y: 0
+        width: 140
+        height: 140
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -208,14 +197,13 @@ TextureImporter:
       name: Idle_4
       rect:
         serializedVersion: 2
-        x: 619
-        y: 43
-        width: 34
-        height: 51
+        x: 560
+        y: 0
+        width: 140
+        height: 140
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -230,14 +218,13 @@ TextureImporter:
       name: Idle_5
       rect:
         serializedVersion: 2
-        x: 758
-        y: 43
-        width: 35
-        height: 51
+        x: 700
+        y: 0
+        width: 140
+        height: 140
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -252,14 +239,13 @@ TextureImporter:
       name: Idle_6
       rect:
         serializedVersion: 2
-        x: 897
-        y: 43
-        width: 33
-        height: 52
+        x: 840
+        y: 0
+        width: 140
+        height: 140
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -274,14 +260,13 @@ TextureImporter:
       name: Idle_7
       rect:
         serializedVersion: 2
-        x: 1037
-        y: 43
-        width: 33
-        height: 53
+        x: 980
+        y: 0
+        width: 140
+        height: 140
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -296,14 +281,13 @@ TextureImporter:
       name: Idle_8
       rect:
         serializedVersion: 2
-        x: 1177
-        y: 43
-        width: 33
-        height: 53
+        x: 1120
+        y: 0
+        width: 140
+        height: 140
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -318,14 +302,13 @@ TextureImporter:
       name: Idle_9
       rect:
         serializedVersion: 2
-        x: 1317
-        y: 43
-        width: 33
-        height: 53
+        x: 1260
+        y: 0
+        width: 140
+        height: 140
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -337,7 +320,6 @@ TextureImporter:
       edges: []
       weights: []
     outline: []
-    customData: 
     physicsShape: []
     bones: []
     spriteID: 5e97eb03825dee720800000000000000
@@ -347,8 +329,6 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    spriteCustomMetadata:
-      entries: []
     nameFileIdTable:
       Idle_0: 462434960
       Idle_1: -1549590570
@@ -365,3 +345,10 @@ TextureImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 284492
+  packageName: Evil Wizard 3
+  packageVersion: 1.0
+  assetPath: Assets/Evil Creature/Sprites/Idle.png
+  uploadId: 666277
