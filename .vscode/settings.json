@@ -56,5 +56,12 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "game.sln"
+    "dotnet.defaultSolution": "game.sln",
+    "cSpell.words": [
+        "Behaviour",
+        "dreamcatcher",
+        "Dreamcatchers",
+        "tilemap",
+        "Tilemaps"
+    ]
 }

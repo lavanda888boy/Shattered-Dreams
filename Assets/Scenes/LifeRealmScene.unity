@@ -328,6 +328,7 @@ GameObject:
   m_Component:
   - component: {fileID: 206385793}
   - component: {fileID: 206385794}
+  - component: {fileID: 206385795}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -364,6 +365,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dreamcatcherCount: 0
   dreamcatcherCountText: {fileID: 1064178029}
+--- !u!114 &206385795
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 206385791}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ed904422cb35d04882460f87aaa54c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  groundTilemap: {fileID: 816627292}
+  dreamcatcherPrefab: {fileID: 480349507}
+  numberOfDreamcatchers: 5
 --- !u!1001 &208692248
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -803,6 +819,11 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &480349507 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2067281339504686414, guid: fb5a969dd613b04448a408e841c18b45, type: 3}
+  m_PrefabInstance: {fileID: 405782443}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &480740193
 GameObject:
   m_ObjectHideFlags: 0
