@@ -97,6 +97,10 @@ public class PlayerController : MonoBehaviour
             isGrounded = true;
             animator.SetBool("isJumping", false);
         }
+        else if (collision.gameObject.CompareTag("Spikes"))
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D other)
