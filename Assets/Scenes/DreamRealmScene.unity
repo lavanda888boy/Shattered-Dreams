@@ -532,8 +532,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e7e9ae68d1ffbf46b9ccff0169da45d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  detectionRange: 10
-  walkSpeed: 7
+  walkSpeed: 20
   runSpeed: 17
   closeRange: 3
   idleThreshold: 0.1
@@ -1826,7 +1825,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ed904422cb35d04882460f87aaa54c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  groundTilemap: {fileID: 1729365249}
   collectablePrefab: {fileID: 4002878780440066804, guid: 59ec11cb53345bd4ca25d378b5bac7af, type: 3}
   numberOfItems: 15
   minDistance: 5
@@ -1858,8 +1856,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soulPortionCount: 0
-  totalDreamcatcherCount: 15
+  totalSoulPortionsCount: 15
   soulPortionCountText: {fileID: 69141158}
+  sceneToLoad: LifeRealmScene
 --- !u!1001 &852107379
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2946,7 +2945,7 @@ MonoBehaviour:
   player: {fileID: 0}
   smoothSpeed: 0.125
   offset: {x: 0, y: 0, z: -10}
-  minX: -43
+  minX: -42
   maxX: -7
   minY: -20
   maxY: 11

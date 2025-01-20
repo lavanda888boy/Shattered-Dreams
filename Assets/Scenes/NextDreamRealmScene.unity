@@ -527,8 +527,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e7e9ae68d1ffbf46b9ccff0169da45d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  detectionRange: 10
-  walkSpeed: 7
+  walkSpeed: 20
   runSpeed: 17
   closeRange: 3
   idleThreshold: 0.1
@@ -2218,8 +2217,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soulPortionCount: 0
-  totalDreamcatcherCount: 15
+  totalSoulPortionsCount: 15
   soulPortionCountText: {fileID: 489594539}
+  sceneToLoad: LifeRealmScene
 --- !u!114 &1453451283
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2232,7 +2232,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ed904422cb35d04882460f87aaa54c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  groundTilemap: {fileID: 1729365249}
   collectablePrefab: {fileID: 4002878780440066804, guid: 59ec11cb53345bd4ca25d378b5bac7af, type: 3}
   numberOfItems: 15
   minDistance: 10

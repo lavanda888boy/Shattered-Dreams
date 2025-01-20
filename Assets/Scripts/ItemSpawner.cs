@@ -1,44 +1,28 @@
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Tilemaps;
 
 public class ItemSpawner : MonoBehaviour
 {
-    public Tilemap groundTilemap;
     public GameObject collectablePrefab;
-    public int numberOfItems = 10;
-    public float minDistance = 2.0f;
+    public int numberOfItems = 15;
+    public float minDistance = 5.0f;
 
-    private List<Vector3> validPositions = new List<Vector3>();
+    private List<Vector3> groundPositions = new List<Vector3>();
     private List<Vector3> usedPositions = new List<Vector3>();
 
     void Start()
     {
-        GenerateValidPositions();
+        FindGroundPositions();
         SpawnItems();
     }
 
-    void GenerateValidPositions()
+    void FindGroundPositions()
     {
-        BoundsInt bounds = groundTilemap.cellBounds;
+        GameObject[] groundObjects = GameObject.FindGameObjectsWithTag("Ground");
 
-        for (int x = bounds.xMin; x < bounds.xMax; x++)
+        foreach (GameObject ground in groundObjects)
         {
-            for (int y = bounds.yMin; y < bounds.yMax; y++)
-            {
-                Vector3Int tilePosition = new Vector3Int(x, y, 0);
-
-                if (groundTilemap.HasTile(tilePosition))
-                {
-                    Vector3Int tileAbove = new Vector3Int(x, y + 1, 0);
-                    if (!groundTilemap.HasTile(tileAbove))
-                    {
-                        Vector3 worldPosition = groundTilemap.CellToWorld(tilePosition) +
-                                                new Vector3(0, groundTilemap.cellSize.y + 2f, 0);
-                        validPositions.Add(worldPosition);
-                    }
-                }
-            }
+            groundPositions.Add(ground.transform.position);
         }
     }
 
@@ -48,7 +32,7 @@ public class ItemSpawner : MonoBehaviour
 
         for (int i = 0; i < numberOfItems; i++)
         {
-            if (validPositions.Count == 0) break;
+            if (groundPositions.Count == 0) break;
 
             Vector3 spawnPosition;
             int attempts = 0;
@@ -61,8 +45,8 @@ public class ItemSpawner : MonoBehaviour
                     return;
                 }
 
-                int randomIndex = Random.Range(0, validPositions.Count);
-                spawnPosition = validPositions[randomIndex];
+                int randomIndex = Random.Range(0, groundPositions.Count);
+                spawnPosition = groundPositions[randomIndex] + new Vector3(0, 3.0f, 0);
                 attempts++;
             }
             while (!IsFarEnoughFromOthers(spawnPosition));
@@ -71,7 +55,7 @@ public class ItemSpawner : MonoBehaviour
 
             usedPositions.Add(spawnPosition);
 
-            validPositions.Remove(spawnPosition);
+            groundPositions.Remove(spawnPosition);
         }
     }
 
@@ -85,5 +69,11 @@ public class ItemSpawner : MonoBehaviour
             }
         }
         return true;
+    }
+
+    bool IsCollidingWithObjects(Vector3 position)
+    {
+        Collider[] colliders = Physics.OverlapSphere(position, 2.0f);
+        return colliders.Length > 0;
     }
 }

@@ -1,10 +1,10 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EnemyController : MonoBehaviour
 {
     private Transform player;
-    public float detectionRange = 10f;
-    public float walkSpeed = 7f;
+    public float walkSpeed = 20f;
     public float runSpeed = 17f;
     public float closeRange = 3f;
     public float idleThreshold = 0.1f;
@@ -20,11 +20,6 @@ public class EnemyController : MonoBehaviour
         FindPlayer();
     }
 
-    private void Awake()
-    {
-        DontDestroyOnLoad(gameObject);
-    }
-
     void Update()
     {
         if (player == null)
@@ -37,29 +32,27 @@ public class EnemyController : MonoBehaviour
             float distanceToPlayer = Vector2.Distance(transform.position, player.position);
             Vector2 directionToPlayer = (player.position - transform.position).normalized;
 
-            if (distanceToPlayer <= detectionRange)
+            if (distanceToPlayer > 15.0f)
             {
-                if (distanceToPlayer <= closeRange)
-                {
-                    rb.linearVelocityX = directionToPlayer.x * walkSpeed;
-                }
-                else
-                {
-                    rb.linearVelocityX = directionToPlayer.x * runSpeed;
-                }
+                TeleportToPlayer();
+                return;
+            }
 
-                animator.SetFloat("Speed", Mathf.Abs(rb.linearVelocityX));
-
-                if (directionToPlayer.x < 0)
-                    transform.localScale = new Vector3(-1, 1, 1);
-                else if (directionToPlayer.x > 0)
-                    transform.localScale = new Vector3(1, 1, 1);
+            if (distanceToPlayer <= closeRange)
+            {
+                rb.linearVelocityX = directionToPlayer.x * walkSpeed;
             }
             else
             {
-                rb.linearVelocityX = 0;
-                animator.SetFloat("Speed", rb.linearVelocityX);
+                rb.linearVelocityX = directionToPlayer.x * runSpeed;
             }
+
+            animator.SetFloat("Speed", Mathf.Abs(rb.linearVelocityX));
+
+            if (directionToPlayer.x < 0)
+                transform.localScale = new Vector3(-1, 1, 1);
+            else if (directionToPlayer.x > 0)
+                transform.localScale = new Vector3(1, 1, 1);
         }
 
         if (Mathf.Abs(rb.linearVelocityX) < idleThreshold)
@@ -79,5 +72,27 @@ public class EnemyController : MonoBehaviour
         {
             player = playerObj.transform;
         }
+    }
+
+    private void TeleportToPlayer()
+    {
+        if (player != null)
+        {
+            Debug.Log("Teleporting to player...");
+            transform.position = new Vector3(player.position.x - 5.0f, player.position.y, transform.position.z);
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            RestartScene();
+        }
+    }
+
+    private void RestartScene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }

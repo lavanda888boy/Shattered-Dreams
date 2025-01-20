@@ -5,12 +5,15 @@ using UnityEngine.SceneManagement;
 public class PlayerController : MonoBehaviour
 {
     public float moveSpeed = 10f;
-    public float jumpForce = 12f;
+    public float jumpForce = 15f;
     private Rigidbody2D rb;
     private Animator animator;
     private bool isGrounded;
     public DreamcatcherManager DreamcatcherManager;
     public SoulPortionManager SoulPortionManager;
+
+    public string[] scenesToLoad;
+    private int levelCompletionCount = 0;
 
     void Start()
     {
@@ -54,9 +57,10 @@ public class PlayerController : MonoBehaviour
             DreamcatcherManager = gameManager.GetComponent<DreamcatcherManager>();
             SoulPortionManager = gameManager.GetComponent<SoulPortionManager>();
 
-            if (DreamcatcherManager == null && SoulPortionManager == null)
+            if (DreamcatcherManager != null)
             {
-                Debug.LogWarning("Managers not found on GameManager object.");
+                DreamcatcherManager.sceneToLoad = scenesToLoad[levelCompletionCount];
+                levelCompletionCount++;
             }
         }
         else
@@ -80,7 +84,7 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-            jumpForce = 12f;
+            jumpForce = 15f;
         }
 
         InitializeManagers();
